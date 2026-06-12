@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LEI AO | Mobile Programming e-Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5fbff;
+color:#333;
+overflow-x:hidden;
+}
+
+:root{
+--primary:#4FC3F7;
+--secondary:#03A9F4;
+--dark:#0288D1;
+--light:#E1F5FE;
+--white:#ffffff;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+z-index:999;
+box-shadow:0 2px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:var(--dark);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--dark);
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(
+135deg,
+#4FC3F7,
+#81D4FA,
+#B3E5FC
+);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+color:white;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:1.5rem;
+font-weight:400;
+color:white;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.1rem;
+color:white;
+line-height:1.8;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 32px;
+background:white;
+color:var(--dark);
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.5rem;
+color:var(--dark);
+}
+
+.section-title p{
+color:#666;
+margin-top:10px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.about-card h3{
+margin-bottom:20px;
+color:var(--dark);
+}
+
+.about-card p{
+line-height:1.8;
+}
+
+.info-list{
+list-style:none;
+}
+
+.info-list li{
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.info-list strong{
+color:var(--dark);
+}
+
+.sdg-section{
+background:linear-gradient(
+135deg,
+#e1f5fe,
+#f5fbff
+);
+border-radius:30px;
+padding:50px;
+text-align:center;
+}
+
+.sdg-section h3{
+font-size:2rem;
+color:var(--dark);
+margin-bottom:15px;
+}
+
+.sdg-section p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.lab-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.lab-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.lab-card:hover{
+transform:translateY(-8px);
+}
+
+.lab-content{
+padding:25px;
+}
+
+.lab-content h3{
+color:var(--dark);
+margin-bottom:10px;
+}
+
+.lab-content p{
+line-height:1.8;
+color:#555;
+}
+
+iframe{
+width:100%;
+height:220px;
+border:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+LEI AO
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#labs">Labs</a>
+<a href="#projects">Projects</a>
+<a href="#reflection">Reflection</a>
+<a href="#skills">Skills</a>
+<a href="#resources">Resources</a>
+</div>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>LEI AO</h1>
+
+<h2>Mobile Programming e-Portfolio</h2>
+
+<p>
+Bachelor of Software Engineering<br>
+Matric No: A207416<br>
+Instructor: Cikgu Izwan
+</p>
+
+<a href="#about" class="hero-btn">
+Explore Portfolio
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>My Mobile Programming Learning Journey</p>
+</div>
+
+<div class="about">
+
+<div class="about-card">
+
+<h3>Student Information</h3>
+
+<ul class="info-list">
+
+<li><strong>Name:</strong> LEI AO</li>
+
+<li><strong>Matric No:</strong> A207416</li>
+
+<li><strong>Programme:</strong> Software Engineering</li>
+
+<li><strong>Course:</strong> Mobile Programming</li>
+
+<li><strong>Instructor:</strong> Cikgu Izwan</li>
+
+</ul>
+
+</div>
+
+<div class="about-card">
+
+<h3>Introduction</h3>
+
+<p>
+Throughout this Mobile Programming course, I learned how to design and develop Android applications using Kotlin and Jetpack Compose. Starting from basic user interface development, I gradually explored navigation, database management, cloud integration, and sensor-based interactions. This e-Portfolio showcases my laboratory activities, projects, technical skills, and overall learning journey.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="sdg-section">
+
+<h3>SDG 4: Quality Education</h3>
+
+<p>
+I believe quality education provides opportunities for personal growth, skill development, and lifelong learning. It empowers students to achieve their goals and contribute positively to society. Through technology and mobile applications, we can support more effective and accessible learning experiences.
+</p>
+
+</div>
+
+</section>
+
+<section id="labs">
+
+<div class="section-title">
+<h2>Laboratory Activities</h2>
+<p>Practical Learning Through Mobile Development</p>
+</div>
+
+<div class="lab-grid">
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/PxHETB_dvCE"></iframe>
+
+<div class="lab-content">
+
+<h3>Lab 1 - UI Design</h3>
+
+<p>
+This lab introduced the fundamentals of Jetpack Compose and Android user interface development. I learned how to build layouts, arrange components, and create visually appealing mobile screens.
+</p>
+
+</div>
+
+</div>
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/jIkC-1c1ugo"></iframe>
+
+<div class="lab-content">
+
+<h3>Lab 2 - Interaction</h3>
+
+<p>
+This lab focused on user interaction and state management. I implemented interactive components and learned how Android applications respond dynamically to user actions.
+</p>
+
+</div>
+
+</div>
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/Jqvcs8w1Ltk"></iframe>
+
+<div class="lab-content">
+
+<h3>Lab 3 - Material Design</h3>
+
+<p>
+I explored Material Design 3 principles and modern UI components. This lab improved my understanding of consistency, usability, and professional interface design.
+</p>
+
+</div>
+
+</div>
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/mOW1sPuNxuc"></iframe>
+
+<div class="lab-content">
+
+<h3>Lab 4 - Navigation</h3>
+
+<p>
+This lab introduced Android Navigation and multi-screen applications. I learned how to connect pages and create a seamless user experience across screens.
+</p>
+
+</div>
+
+</div>
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/nX-fS4qXH3w"></iframe>
+
+<div class="lab-content">
+
+<h3>Lab 5 - Room Database</h3>
+
+<p>
+This lab focused on local data persistence using Room Database. I learned how to create entities, DAOs, and databases to manage application data efficiently.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="section-title">
+<h2>Projects</h2>
+<p>Applying Mobile Development Skills in Real Applications</p>
+</div>
+
+<div class="lab-grid">
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/fnyGlZIP_pk"></iframe>
+
+<div class="lab-content">
+
+<h3>Project 1 - Study Buddy</h3>
+
+<p>
+<strong>Problem Statement:</strong><br>
+Many university students struggle to organize their study materials, schedules, and academic tasks efficiently. Study Buddy was developed to provide a centralized platform that helps students organize academic information and improve productivity.
+</p>
+
+<br>
+
+<p>
+Study Buddy Project 1 introduced multiple screens connected through Android Navigation and implemented Room Database to store and manage study-related information. Users can add, edit, and view study records while sharing data across different pages.
+</p>
+
+<br>
+
+<a href="https://github.com/A1-Kenal/A207416_LEIAO_PROJECT1"
+target="_blank"
+style="
+display:inline-block;
+padding:12px 24px;
+background:#03A9F4;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;">
+View on GitHub
+</a>
+
+</div>
+
+</div>
+
+<div class="lab-card">
+
+<iframe src="https://www.youtube.com/embed/lEjZc3Firto"></iframe>
+
+<div class="lab-content">
+
+<h3>Project 2 - Study Buddy</h3>
+
+<p>
+<strong>Problem Statement:</strong><br>
+Students often need a more engaging and interactive learning environment. Study Buddy was enhanced with cloud synchronization and interactive features to improve the overall learning experience.
+</p>
+
+<br>
+
+<p>
+Project 2 integrates Firebase Firestore, Android sensors, and cloud services. Users can generate motivational quotes by shaking their devices, while cloud storage allows data synchronization and accessibility across different sessions.
+</p>
+
+<br>
+
+<a href="https://github.com/A1-Kenal/A207416_LEIAO_Project2_new"
+target="_blank"
+style="
+display:inline-block;
+padding:12px 24px;
+background:#03A9F4;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;">
+View on GitHub
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="reflection">
+
+<div class="section-title">
+<h2>Reflection & Learning Journey</h2>
+<p>From Beginner to Mobile Application Developer</p>
+</div>
+
+<div style="
+max-width:1000px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+line-height:2;">
+
+<p>
+Throughout this Mobile Programming course, I gradually progressed from designing simple user interfaces to developing complete Android applications with database, navigation, cloud, and sensor integration.
+</p>
+
+<br>
+
+<p>
+Each laboratory session introduced new concepts that expanded my technical skills and understanding of mobile application development. The two projects allowed me to apply theoretical knowledge in practical scenarios while solving real-world problems.
+</p>
+
+<br>
+
+<p>
+Project 1 strengthened my understanding of Room Database, Navigation, and multi-screen application design. Project 2 challenged me to integrate Firebase Firestore, cloud synchronization, and Android sensors into a single application.
+</p>
+
+<br>
+
+<p>
+Overall, this learning journey significantly improved my confidence, programming skills, problem-solving abilities, and understanding of modern Android application development using Kotlin and Jetpack Compose.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="section-title">
+<h2>Skills & Technologies</h2>
+<p>Tools and Technologies Learned Throughout the Course</p>
+</div>
+
+<div style="
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;">
+
+<span class="hero-btn">Kotlin</span>
+<span class="hero-btn">Jetpack Compose</span>
+<span class="hero-btn">Material Design 3</span>
+<span class="hero-btn">Android Navigation</span>
+<span class="hero-btn">Room Database</span>
+<span class="hero-btn">SQLite</span>
+<span class="hero-btn">REST API</span>
+<span class="hero-btn">Firebase Firestore</span>
+<span class="hero-btn">Android Sensors</span>
+<span class="hero-btn">MVVM Architecture</span>
+<span class="hero-btn">Git</span>
+<span class="hero-btn">GitHub</span>
+<span class="hero-btn">UI/UX Design</span>
+
+</div>
+
+</section>
+
+<section id="resources">
+
+<div class="section-title">
+<h2>Resources</h2>
+<p>References and Acknowledgements</p>
+</div>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:1000px;
+margin:auto;">
+
+<ul style="line-height:2;">
+
+<li>Android Developers Documentation</li>
+
+<li>Jetpack Compose Documentation</li>
+
+<li>Firebase Firestore Documentation</li>
+
+<li>Material Design 3 Documentation</li>
+
+<li>GitHub Documentation</li>
+
+<li>Kotlin Official Documentation</li>
+
+<li>YouTube Tutorials and Learning Resources</li>
+
+<li>AI Assistance: ChatGPT (used for learning support, debugging, and content organization)</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<footer style="
+background:linear-gradient(
+135deg,
+#03A9F4,
+#0288D1
+);
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:80px;">
+
+<h3>LEI AO</h3>
+
+<p>A207416 | Software Engineering</p>
+
+<p>Mobile Programming e-Portfolio</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
